@@ -69,6 +69,39 @@ public class LL {
         }
     }
 
+    public void deleteFirst() {
+        head = head.next;
+
+        if (head == null) {
+            tail = head;
+        }
+        size--;
+    }
+    public int deleteFirstAndReturn() {
+        int val = head.data;
+        head = head.next;
+
+        if (head == null) {
+            tail = head;
+        }
+        size--;
+        return val;
+    }
+
+    public int deleteLastAndReturn() {
+        int val;
+        Node temp = head;
+
+        while (temp.next.next != null) {
+            temp = temp.next;
+            size--;
+        }
+        val = temp.next.data;
+        temp.next = null;
+
+        return val;
+    }
+
     public void displayTheList() {
         Node temp = head;
 

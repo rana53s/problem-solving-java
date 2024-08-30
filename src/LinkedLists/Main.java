@@ -20,6 +20,12 @@ public class Main {
         // Insert before an element;
         list.insertBefore(9, 6);
 
+        // Delete from beginning
+//        list.deleteFirst();
+        System.out.println(list.deleteFirstAndReturn());
+
+        System.out.println(list.deleteLastAndReturn());
+
         list.displayTheList();
 
     }
